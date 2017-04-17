@@ -1,14 +1,13 @@
-#  Work on JSON based data exercises and submit on your Github
-## JSON examples and exercise
+# JSON examples and exercise
 get familiar with packages for dealing with JSON  
 study examples with JSON strings and files  
 work on exercise to be completed and submitted  
 reference: http://pandas.pydata.org/pandas-docs/stable/io.html#io-json-reader
 data source: http://jsonstudio.com/resources/  
-### JSON example, with string
+## JSON example, with string
 demonstrates creation of normalized dataframes (tables) from nested json string  
 source: http://pandas.pydata.org/pandas-docs/stable/io.html#normalization  
-### JSON example, with file
+## JSON example, with file
 demonstrates reading in a json file as a string and as a table
 uses small sample file containing data about projects funded by the World Bank
 data source: http://jsonstudio.com/resources/
