@@ -1,11 +1,11 @@
-# XML example and exercise
+## XML example and exercise
 . study examples of accessing nodes in XML tree structure  
 . work on exercise to be completed and submitted  
 . reference: https://docs.python.org/2.7/library/xml.etree.elementtree.html  
 . data source: http://www.dbis.informatik.uni-goettingen.de/Mondial  
-## XML example
+### XML example
 . for details about tree traversal and iterators, see https://docs.python.org/2.7/library/xml.etree.elementtree.html
-## XML exercise
+### XML exercise
 Using data in 'data/mondial_database.xml', the examples above, and refering to https://docs.python.org/2.7/library/xml.etree.elementtree.html, find  
 1. 10 countries with the lowest infant mortality rates  
 2. 10 cities with the largest population  
