@@ -47,7 +47,7 @@ It’s possible that the code that logs events is, itself, broken.
 For a website that receives a lot of traffic, changes in the way search engines index them could cause big swings in traffic.
 
 ### Solving the case
-1. Check growth
+#### 1. Check growth
 ```
 SELECT DATE_TRUNC('day',created_at) AS day,
        COUNT(*) AS all_users,
@@ -61,7 +61,7 @@ SELECT DATE_TRUNC('day',created_at) AS day,
 ![Daily_Signups](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Daily_Signups.png)  
 From above chart, we can see that growth is normal. 
 
-2. Check device 
+#### 2. Check device 
 ```
 SELECT DATE_TRUNC('week', occurred_at) AS week,
        COUNT(DISTINCT e.user_id) AS weekly_active_users,
@@ -81,7 +81,7 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
 ![Engagement_by_Device](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Weekly_Engagement_by_Device.png)  
 From above chart, we can see that there’s a pretty steep drop in phone engagement rates. So it’s likely that there’s a problem with the mobile app related to long-time user retention. 
 
-3. Check emails
+#### 3. Check emails
 ```
 SELECT DATE_TRUNC('week', occurred_at) AS week,
        COUNT(CASE WHEN e.action = 'sent_weekly_digest' THEN e.user_id ELSE NULL END) AS weekly_emails,
@@ -95,7 +95,7 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
  ![Email_Actions](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Email_Actions.png) 
 We can see see that clickthroughs are way down. 
  
- 4. Check email clickthroughs
+#### 4. Check email clickthroughs
 ```
 SELECT week,
        weekly_opens/CASE WHEN weekly_emails = 0 THEN 1 ELSE weekly_emails END::FLOAT AS weekly_open_rate,
@@ -131,8 +131,8 @@ SELECT DATE_TRUNC('week',e1.occurred_at) AS week,
 ![Open_CT_Rates](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Open_CT_Rates.png)  
 This chart shows in greater detail clickthrough and open rates of emails, indicating clearly that the problem has to do with digest emails in addition to mobile apps.
 
-
-
+### Answers to the questions
+After investigation, it appears that the problem has to do with mobile use and digest emails. The company should check these areas to make sure something isn’t broken or poorly implemented. 
 
 
 
