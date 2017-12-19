@@ -16,13 +16,10 @@ Once you have an ordered list of possible problems, it’s time to investigate.
 
 For this problem, you will need to use four tables. The tables names and column definitions are listed below—click a table name to view information about that table. Note: this data is fake and was generated for the purpose of this case study. It is similar in structure to Yammer’s actual data, but for privacy and security reasons it is not real.
 
-Table 1: Users
-
-Table 2: Events
-
-Table 3: Email Events
-
-Table 4: Rollup Periods
+* __Table 1: Users__
+* __Table 2: Events__
+* __Table 3: Email Events__
+* __Table 4: Rollup Periods__
 
 ### Making a recommendation
 
