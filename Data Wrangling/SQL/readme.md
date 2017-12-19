@@ -5,7 +5,7 @@
 ### The problem
 
 You show up to work Tuesday morning, September 2, 2014. The head of the Product team walks over to your desk and asks you what you think about the latest activity on the user engagement dashboards. You fire them up, and something immediately jumps out:  
-![figure](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/Weekly-Active-Users.png)  
+![Weekly-Active-Users](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Weekly-Active-Users.png)  
 The above chart shows the number of engaged users each week. Yammer defines engagement as having made some type of server call by interacting with the product (shown in the data as events of type “engagement”). Any point in this chart can be interpreted as “the number of users who logged at least one engagement event during the week starting on that date.”
 
 You are responsible for determining what caused the dip at the end of the chart shown above and, if appropriate, recommending solutions for the problem.
@@ -58,6 +58,7 @@ SELECT DATE_TRUNC('day',created_at) AS day,
  GROUP BY 1
  ORDER BY 1
 ```
+![Daily_Signups](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Daily_Signups.png)  
 
 2. Check device 
 ```
@@ -76,6 +77,8 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
  GROUP BY 1
  ORDER BY 1
 ```
+![Engagement_by_Device](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Weekly_Engagement_by_Device.png)  
+
 
 3. Check emails
 ```
@@ -88,6 +91,7 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
  GROUP BY 1
  ORDER BY 1
  ```
+ ![Email_Actions](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Email_Actions.png)  
  
  4. Check email clickthroughs
 ```
@@ -122,7 +126,7 @@ SELECT DATE_TRUNC('week',e1.occurred_at) AS week,
        ) a
  ORDER BY 1
 ```
-
+![Open_CT_Rates](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Open_CT_Rates.png)  
 
 
 
