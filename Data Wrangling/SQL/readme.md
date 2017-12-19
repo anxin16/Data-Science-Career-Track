@@ -59,6 +59,7 @@ SELECT DATE_TRUNC('day',created_at) AS day,
  ORDER BY 1
 ```
 ![Daily_Signups](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Daily_Signups.png)  
+From above chart, we can see that growth is normal. 
 
 2. Check device 
 ```
@@ -78,7 +79,7 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
  ORDER BY 1
 ```
 ![Engagement_by_Device](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Weekly_Engagement_by_Device.png)  
-
+From above chart, we can see that there’s a pretty steep drop in phone engagement rates. So it’s likely that there’s a problem with the mobile app related to long-time user retention. 
 
 3. Check emails
 ```
@@ -91,7 +92,8 @@ SELECT DATE_TRUNC('week', occurred_at) AS week,
  GROUP BY 1
  ORDER BY 1
  ```
- ![Email_Actions](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Email_Actions.png)  
+ ![Email_Actions](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Email_Actions.png) 
+We can see see that clickthroughs are way down. 
  
  4. Check email clickthroughs
 ```
@@ -127,7 +129,7 @@ SELECT DATE_TRUNC('week',e1.occurred_at) AS week,
  ORDER BY 1
 ```
 ![Open_CT_Rates](https://github.com/anxin16/Data-Science-Career-Track/blob/master/Data%20Wrangling/SQL/Figures/Open_CT_Rates.png)  
-
+This chart shows in greater detail clickthrough and open rates of emails, indicating clearly that the problem has to do with digest emails in addition to mobile apps.
 
 
 
